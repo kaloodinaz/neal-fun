@@ -66,6 +66,7 @@ figcaption{text-align:center;padding:12px}
 .button:hover{background-color:#45a049}
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script type="application/ld+json">
       [{
         "@context" : "http://schema.org",
@@ -290,75 +291,15 @@ figcaption{text-align:center;padding:12px}
     <p>Share This Page. Spread the word about this page and its contents with friends and followers on social media platforms. Share your favorite games, articles, and resources with others, and invite them to join in the fun and exploration. Connect with like-minded individuals and communities who share your interests and passions, and foster a sense of camaraderie and collaboration in sharing knowledge and experiences.</p>
     
 <div id="shareResult" class="center">
-    <div class="facebook-button" onclick="shareFacebook()">Share on Facebook</div>
-    <div class="twitter-button" onclick="shareTwitter()">Share on X.com</div>
-    <div class="reddit-button" onclick="shareReddit()">Share on Reddit</div>
-    <div class="whatsapp-button" onclick="shareWhatsApp()">Share on WhatsApp</div>
+  <amp-social-share class="facebook-button" type="facebook" width="40" height="40"></amp-social-share>
+  <amp-social-share type="twitter" class="twitter-button" width="40" height="40" data-param-url="https://www.x.com/@Kinord6"></amp-social-share>
+    <amp-social-share class="reddit-button" type="reddit" width="40" height="40"></amp-social-share>
     </div>
     <div id="shareResultMobile" class="center">
-        <div id="shareButton" class="share-button" onclick="share()">Copy link</div>
+       <div id="shareButton" class="share-button" on="tap:shareButtonContainer.toggleVisibility">Copy link</div>
+  <div id="shareButtonContainer" class="share-button-container" hidden>
+    <p>Link copied!</p>
         </div>
 
-
-  <script>
-
-function shareFacebook() {
-    const url = window.location.href;
-    const title = document.title;
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`;
-    window.open(facebookShareUrl, "_blank");
-}
-
-function shareTwitter() {
-    const url = window.location.href;
-    const title = document.title;
-    const twitterShareUrl = `https://www.x.com/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
-    window.open(twitterShareUrl, "_blank");
-}
-
-function shareWhatsApp() {
-    const url = window.location.href;
-    const title = document.title;
-    const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(title + " " + url)}`;
-    window.open(whatsappShareUrl);
-}
-function shareReddit() {
-    const url = window.location.href;
-    const title = document.title;
-    const redditShareUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
-    window.open(redditShareUrl, "_blank");
-}
-
-function share() {
-    const url = window.location.href;
-    const title = document.title;
-
-    if (navigator.share) {
-        navigator.share({
-            title: title,
-            text: title,
-            url: url
-        }).then(() => {
-            console.log('Successfully shared');
-        }).catch((error) => {
-            console.error('Mistakes when sharing on social media:', error);
-        });
-    } else {
-        const textarea = document.createElement('textarea');
-        textarea.value = title + "\n" + url;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-
-        const shareButton = document.getElementById('shareButton');
-        shareButton.textContent = 'Copied!';
-        setTimeout(function() {
-            shareButton.textContent = 'Copy link';
-        }, 2000);
-        console.log('Copied link');
-    }
-}
-  </script>
 </body>
 </html>
