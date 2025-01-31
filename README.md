@@ -3,7 +3,7 @@ Welcome to Neal Fun! This project explores a collection of creative, interactive
 
 *About Neal Fun*
 
-Neal Fun is a website created by Neal Agarwal, a developer known for his innovative and fun web experiences. The platform features a variety of games, simulations, and interactive experiments that engage users with unique and sometimes educational content. You can explore the full collection at [neal-fun](https://neal-fun.org/)
+Neal Fun is a website created by Neal Agarwal, a developer known for his innovative and fun web experiences. The platform features a variety of games, simulations, and interactive experiments that engage users with unique and sometimes educational content. You can explore the full collection at [neal-fun](https://neal-fun.org/).
 Neal Fun is a fantastic resource for interactive and engaging online activities! Whether you're looking for brain teasers, puzzles, or games to challenge yourself, Neal Fun offers a wide variety of options to keep you entertained and mentally sharp.
 
 *Popular Games on Neal Fun*
@@ -54,7 +54,7 @@ Author: Neal Agarwal
 
 Neal Agarwal is a developer passionate about making the internet a more fun and interesting place. His projects often blend education, humor, and creativity to provide unique experiences for users worldwide.
 
-*Follow Neal Agarwal*
+*Follow Kaloo Dinaz*
 
 Website: neal-fun.org
 
