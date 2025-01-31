@@ -12,7 +12,7 @@ Here are some of the most popular and interesting games available on Neal Fun:
 
 1. Spend Elon Musk Money
 
-A fun simulation where you can "spend" Bill Gates' fortune on various items and see how much money he actually has.
+A fun simulation where you can "spend" Elon Musk' fortune on various items and see how much money he actually has.
 
 2. Draw Logos from Memory
 
